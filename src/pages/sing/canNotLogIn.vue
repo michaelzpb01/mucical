@@ -28,7 +28,7 @@
       <div class="remind">
 
         <p>Be sure to check your spam filter for</p>
-        <p>an email <router-link to="singup">musical@gmail.co</router-link></p>
+        <p>an email <span>musical@gmail.co</span></p>
       </div>
     </div>
   </div>
@@ -140,7 +140,7 @@
     transform: translateX(-50%);
     color: #8f8e94;
     line-height:pxTorem(50px);
-    a{
+    span{
       color: #fff;
       font-size:pxTorem(36px);
     }

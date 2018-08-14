@@ -2,7 +2,7 @@
   <div class="login">
     <header_v>
       <p class="left_minu_slot" slot="left_minu"></p>
-      <p class="center_title_slot" slot="center_title">Login</p>
+      <p class="center_title_slot" slot="center_title">Sing In</p>
       <p class="right_minu_slot" slot="right_minu"></p>
     </header_v>
     <div class="title_img">
@@ -19,7 +19,8 @@
     <div class="minu">
 
       <div class="login_minu">
-        <input type="button" class="login_btn" value="Login">
+        <router-link to="SingIn">Sing In</router-link>
+        <!--<input type="button" class="login_btn" value="Login">-->
       </div>
 
 
@@ -36,9 +37,9 @@
        <!-- <input type="button" class="login_fb">
         <input type="button" class="login_tw">-->
       </div>
-      <div class="test">
+      <!--<div class="test">-->
 
-      </div>
+      <!--</div>-->
       <div class="singup">
         <router-link to="Singup">Sing Up</router-link>
       </div>
@@ -105,9 +106,11 @@
     }
   }
   .login_minu{
-    .login_btn{
+    a{
+      display: block;
       width:pxTorem(554px);
       height:pxTorem(88px);
+      line-height:pxTorem(80px);
       background: none;
       border:1px solid #3f3e44;
       border-radius: pxTorem(10px);

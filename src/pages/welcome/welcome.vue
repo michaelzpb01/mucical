@@ -4,34 +4,40 @@
       <p class="left_minu_slot" slot="left_minu"></p>
       <p class="center_title_slot" slot="center_title">Walkthrough</p>
       <p class="right_minu_slot" slot="right_minu">
-        <router-link to="SingIn"> Skip</router-link>
+        <router-link to="logIn"> Skip</router-link>
       </p>
     </header_v>
     <div class="silder">
-      <mt-swipe :auto = 0 :continuous="false">
-        <mt-swipe-item>
-          <img src="./img/1.jpg">
-        </mt-swipe-item>
-        <mt-swipe-item>
-          <img src="./img/2.jpg">
-        </mt-swipe-item>
-        <mt-swipe-item>
-          <img src="./img/3.jpg">
-        </mt-swipe-item>
+      <swiper :options="swiperOption" >
+        <!-- slides -->
+        <swiper-slide><img src="./img/1.jpg"></swiper-slide>
+        <swiper-slide><img src="./img/2.jpg"></swiper-slide>
+        <swiper-slide><img src="./img/3.jpg"></swiper-slide>
+        <!-- Optional controls -->
+        <div class="swiper-pagination"  slot="pagination"></div>
+        <!--<div class="swiper-scrollbar"   slot="scrollbar"></div>-->
+      </swiper>
 
-      </mt-swipe>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
- /* import header from '@/components/header/header';
-
   export default {
-    components: {
-      'header-v': header
+    data() {
+      return {
+        swiperOption: {
+          // some swiper options/callbacks
+          // 所有的参数同 swiper 官方 api 参数
+          // ...
+          pagination: {
+            el: '.swiper-pagination'
+          },
+          loop : true
+        }
+      }
     }
-  };*/
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -53,6 +59,10 @@
       width:100%;
     }
     overflow: hidden;
+    .swiper-pagination{
+      position: fixed;
+      bottom:10px;
+    }
   }
 
   .mint-swipe-indicator{

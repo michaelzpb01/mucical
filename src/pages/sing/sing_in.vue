@@ -5,6 +5,7 @@
       <p class="right_minu_slot" slot="right_minu"></p>
     </header_v>
     <div class="sing_cont">
+
       <!--title-->
       <div class="title">
         <div class="title_logo">
@@ -13,10 +14,12 @@
         <div class="title_name">Musical</div>
       </div>
 
+
+
       <!--firm-->
       <div class="form">
-        <input type="text" class="form_data username" placeholder="Pick a username">
-        <input type="text" class="form_data fassworld" placeholder="Create a password">
+        <input type="text" class="form_data username" v-model="username" placeholder="Pick a username">
+        <input type="text" class="form_data fassworld" v-model="password" placeholder="Create a password">
       </div>
 
       <!--minu-->
@@ -24,12 +27,16 @@
         <li class="minu_fb minu_shear">
           <i class="iconfont icon-facebookicon"></i>
         </li>
-        <li class="minu_sing">Sign In</li>
+        <li class="minu_sing" @click="submit()">Sign In</li>
         <li class="minu-tw minu_shear">
           <i class="iconfont icon-twitter"></i>
         </li>
 
       </ul>
+      <!--Forgot your password-->
+      <div class="reset-password">
+        <router-link to="canNotLogIn">Forgot your password?</router-link>
+      </div>
 
       <!--remind-->
       <div class="remind"><router-link to="singup">Already have an account?</router-link></div>
@@ -41,11 +48,28 @@
   export default {
     data(){
       return {
-        aaaa:222
+        username:'',
+        password:'',
+        popupVisible:false
       }
     },
+    methods:{
+        submit(){
+          if(this.username == ''){
+            this.Toast('请输入用户名');
+            return false;
+          }else if(this.password == ''){
+            this.Toast('请输入密码');
+            return false;
+          }else{
+            console.log(1);
+            this.$router.push({path:'/Musical'});
+          }
+        }
+    },
     mounted(){
-      console.log(this.aaaa)
+      //console.log(this.aaaa)
+
     }
   }
 </script>
@@ -131,5 +155,14 @@
   }
   input::-webkit-input-placeholder{
     color: #fff;
+  }
+  .reset-password{
+    height:auto;
+    line-height:pxTorem(32px);
+    a{
+      font-size:pxTorem(32px);
+      color: #fff;
+      text-align: center;
+    }
   }
 </style>
