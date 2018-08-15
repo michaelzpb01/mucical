@@ -14,9 +14,7 @@ export default {
 <style lang="scss">
   @import "assets/scss/reset.scss";
   @import "assets/scss/common.scss";
-  @import "assets/css/icon.css";
-  //@import "assets/iconfont/iconfont.css";
-
+  //@import "assets/css/icon.css";
   #app,html,body{
     width:100%;
     height:100%;

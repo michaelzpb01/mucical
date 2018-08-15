@@ -15,11 +15,10 @@
       </div>
 
 
-
       <!--firm-->
       <div class="form">
         <input type="text" class="form_data username" v-model="username" placeholder="Pick a username">
-        <input type="text" class="form_data fassworld" v-model="password" placeholder="Create a password">
+        <input type="text" class="form_data password" v-model="password" placeholder="Create a password">
       </div>
 
       <!--minu-->
@@ -27,7 +26,9 @@
         <li class="minu_fb minu_shear">
           <i class="iconfont icon-facebookicon"></i>
         </li>
-        <li class="minu_sing" @click="submit()">Sign In</li>
+        <li class="minu_sing">
+          <input type="button"  @click="submits" value="Sign In">
+        </li>
         <li class="minu-tw minu_shear">
           <i class="iconfont icon-twitter"></i>
         </li>
@@ -39,36 +40,43 @@
       </div>
 
       <!--remind-->
-      <div class="remind"><router-link to="singup">Already have an account?</router-link></div>
+      <div class="remind">
+        <router-link to="singup">Already have an account?</router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
   export default {
-    data(){
+    data() {
       return {
-        username:'',
-        password:'',
-        popupVisible:false
+        username: '',
+        password: '',
+        popupVisible: false
       }
     },
-    methods:{
-        submit(){
-          if(this.username == ''){
-            this.Toast('请输入用户名');
-            return false;
-          }else if(this.password == ''){
-            this.Toast('请输入密码');
-            return false;
-          }else{
-            console.log(1);
-            this.$router.push({path:'/Musical'});
-          }
+    methods: {
+      submits() {
+        const _ = this._._;
+        console.log(_('.username'));
+        if (!this.username) {
+          this.Toast('请输入用户名');
+          _('.username')[0].focus();
+          return false;
+        } else if (!this.password) {
+          _('.password')[0].focus();
+          this.Toast('请输入密码');
+          return false;
+        } else {
+          console.log(1);
+          this.$router.push({path: '/Musical'});
         }
+      }
     },
-    mounted(){
+    mounted() {
       //console.log(this.aaaa)
+      console.log(1212121);
 
     }
   }
@@ -80,10 +88,12 @@
     background: url("./img/sing_bg.jpg") no-repeat;
     background-size: cover;
   }
+
   .sing_cont {
     margin-top: pxTorem(180px);
     text-align: center;
   }
+
   .title {
     color: #fff;
     .iconfont {
@@ -92,14 +102,17 @@
       margin-bottom: pxTorem(35px);
     }
   }
+
   .title_name {
     font-size: pxTorem(56px);
   }
+
   .form {
     font-size: 0;
     text-align: right;
     margin-top: pxTorem(40px);
   }
+
   .form_data {
     width: 85%;
     display: inline-block;
@@ -110,57 +123,72 @@
     background: none;
     color: #fff;
   }
-  .minu{
-    font-size:0;
+
+  .minu {
+    font-size: 0;
     text-align: center;
-    margin-top:pxTorem(80px);
+    margin-top: pxTorem(80px);
   }
-  .minu li{
+
+  .minu li {
     display: inline-block;
-    height:pxTorem(84px);
-    border-radius:pxTorem(10px) ;
-    border:1px solid transparent;
+    height: pxTorem(84px);
+    border-radius: pxTorem(10px);
+    border: 1px solid transparent;
   }
-  .minu li.minu_sing{
-    width:pxTorem(342px);
+
+  .minu li.minu_sing {
+    width: pxTorem(342px);
     color: #fff;
-    font-size:pxTorem(28px);
-    font-weight:bold;
+    font-size: pxTorem(28px);
+    font-weight: bold;
     overflow: hidden;
-    line-height:pxTorem(84px);
+    line-height: pxTorem(28px);
     background: #0076ff;
-    margin:0 pxTorem(20px);
+    margin: 0 pxTorem(20px);
+    input{
+      width:100%;
+      height:100%;
+      position: relative;
+      z-index:1;
+      background: none;
+      color: #fff;
+    }
   }
-  .minu li.minu_shear{
-    width:pxTorem(84px);
+
+  .minu li.minu_shear {
+    width: pxTorem(84px);
     border-color: #8f8e94;
     color: #fff;
     text-align: center;
-    line-height:pxTorem(84px);
+    line-height: pxTorem(84px);
     overflow: hidden;
-    .iconfont{
-      font-size:pxTorem(40px);
+    .iconfont {
+      font-size: pxTorem(40px);
     }
   }
-  .remind{
-    font-size:pxTorem(32px);
+
+  .remind {
+    font-size: pxTorem(32px);
     position: absolute;
-    width:100%;
-    bottom:pxTorem(100px);
-    left:50%;
+    width: 100%;
+    bottom: pxTorem(100px);
+    left: 50%;
     transform: translateX(-50%);
-    a{
+    a {
       color: #ff9500;
     }
   }
-  input::-webkit-input-placeholder{
+
+  input::-webkit-input-placeholder {
     color: #fff;
   }
-  .reset-password{
-    height:auto;
-    line-height:pxTorem(32px);
-    a{
-      font-size:pxTorem(32px);
+
+  .reset-password {
+    height: auto;
+    line-height: pxTorem(32px);
+    a {
+      font-size: pxTorem(32px);
       color: #fff;
       text-align: center;
     }

@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
   .header{
     width:100%;
     height:pxTorem(78px);
@@ -82,6 +83,18 @@ export default {
     }
     .right_minu a{
       color: #ff9500;
+    }
+    .left_minu_slot,.right_minu_slot{
+      .iconfont{
+        color: #ff9500;
+        font-size:24px;
+        font-weight:bold;
+      }
+    }
+    .right_minu_slot{
+      .iconfont{
+        font-size:22px;
+      }
     }
   }
 </style>

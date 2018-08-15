@@ -7,6 +7,7 @@ import router from './router';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 
 const header_v = resolve => require(['@/components/header/header'], resolve);
+const titleBar = resolve => require(['@/components/common/titleBar'], resolve);
 
 // common js file
 import base from '@/assets/js/base.js';
@@ -38,6 +39,7 @@ Vue.component(Cell.name, Cell);
 Vue.component(Checklist.name, Checklist);
 Vue.component(Popup.name, Popup);
 Vue.component('header_v', header_v);
+Vue.component('titleBar', titleBar);
 
 Vue.prototype._ = base;
 Vue.prototype.Toast = Toast;
