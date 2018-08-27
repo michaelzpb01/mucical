@@ -12,7 +12,6 @@ const titleBar = resolve => require(['@/components/common/titleBar'], resolve);
 // common js file
 import base from '@/assets/js/base.js';
 import '@/assets/js/rem.750.100.js';
-
 // view style
 // import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';

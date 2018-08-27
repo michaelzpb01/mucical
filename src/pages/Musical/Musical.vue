@@ -69,6 +69,18 @@
       </div>
     </div>
 
+    <!--Most Played Tracks-->
+    <div class="tracks">
+      <titleBar>
+        <p class="left_minu_slot" slot="left_minu">Most Played Tracks</p>
+        <p class="right_minu_slot" slot="right_minu">
+          <router-link to="#">See All</router-link>
+        </p>
+      </titleBar>
+
+      
+    </div>
+
   </div>
 </template>
 
@@ -108,7 +120,8 @@
 
 <style lang="scss" scoped>
   .Musical{
-    @extend .defaultStyle;
+    @extend .pageStyle;
+    background-color: #151618;
     .silder{
       height:pxTorem(440px);
       overflow: hidden;
@@ -144,6 +157,20 @@
       }
     }
     .albums{
+      padding-bottom: pxTorem(10px);
+      border-bottom:1px solid #3b3b3e;
+      /*position: relative;*/
+      /*&:after{*/
+        /*position: absolute;*/
+        /*width:100%;*/
+        /*left:0;*/
+        /*bottom:0;*/
+        /*height:1px;*/
+        /*overflow: hidden;*/
+        /*content: '';*/
+        /*background: #3b3b3e;*/
+      /*}*/
+
       .albums-swiper{
         padding-left:pxTorem(20px);
       }
