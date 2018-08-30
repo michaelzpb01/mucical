@@ -8,6 +8,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 
 const header_v = resolve => require(['@/components/header/header'], resolve);
 const titleBar = resolve => require(['@/components/common/titleBar'], resolve);
+const musicList = resolve => require(['@/components/common/musicList'], resolve);
 
 // common js file
 import base from '@/assets/js/base.js';
@@ -17,7 +18,6 @@ import '@/assets/js/rem.750.100.js';
 import 'mint-ui/lib/style.css';
 import 'iview/dist/styles/iview.css';
 import 'swiper/dist/css/swiper.css';
-
 // view in
 // import {Alert} from 'iview';
 import {Swipe, SwipeItem, CellSwipe, Cell, Checklist, Popup,Toast } from 'mint-ui';
@@ -39,6 +39,7 @@ Vue.component(Checklist.name, Checklist);
 Vue.component(Popup.name, Popup);
 Vue.component('header_v', header_v);
 Vue.component('titleBar', titleBar);
+Vue.component('musicList', musicList);
 
 Vue.prototype._ = base;
 Vue.prototype.Toast = Toast;

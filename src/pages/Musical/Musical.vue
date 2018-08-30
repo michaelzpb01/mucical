@@ -78,7 +78,7 @@
         </p>
       </titleBar>
 
-      
+      <musicList list-data="this.musicList"></musicList>
     </div>
 
   </div>
@@ -107,6 +107,19 @@
           slidesPerView: 'auto',
           spaceBetween: 10,
           freeMode: true,
+        },
+        musicList:{
+          type:1,
+          data:[
+            {
+              img:'../../pages/Musical/img/list1.jpg',
+              name:'Long Time',
+              user:'Blondie',
+              lv:2,
+              time:'20:00',
+              money:'$10.22'
+            }
+          ]
         }
       }
     },

@@ -41,12 +41,14 @@
 <style lang="scss" scoped>
 
   .sing_up {
-    width: 100%;
-    height: 100%;
     background: #151618;
     background-size: cover;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
   }
   .sing_cont {
     text-align: center;

@@ -14,7 +14,7 @@
 <style lang="scss">
   @import "assets/scss/reset.scss";
   @import "assets/scss/common.scss";
-  @import "assets/css/font_face.css";
+  // @import "assets/css/font_face.css";
   @import "assets/iconfont/iconfont.css";
 
   #app,html,body{

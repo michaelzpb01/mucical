@@ -53,7 +53,7 @@ export default {
     top:0;
     z-index:1000;
     line-height:pxTorem(78px);
-    background: rgba(21,22,24,.5);
+   /* background: rgba(21,22,24,.5);*/
     .center_title{
       text-align: center;
       font-size:pxTorem(34px);

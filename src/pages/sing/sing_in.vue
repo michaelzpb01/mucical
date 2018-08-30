@@ -84,6 +84,11 @@
 
 <style lang="scss" scoped>
   .sing_in {
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
     @extend .defaultStyle;
     background: url("./img/sing_bg.jpg") no-repeat;
     background-size: cover;

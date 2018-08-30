@@ -58,6 +58,11 @@
     width:pxTorem(750px);
   }
   .login{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
     @extend .defaultStyle;
     background: #4b2b96 url("./img/login_footerbg.jpg") no-repeat bottom;
     background-size: 100% auto;
