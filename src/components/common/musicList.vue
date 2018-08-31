@@ -1,28 +1,34 @@
 <template>
   <ul class="list">
-    <li class="clearFix list-li">
+
+    <li class="clearFix list-li" v-for="(item, index) in listData.data">
         <div class="fl list-img">
           <img src="../../pages/Musical/img/list1.jpg">
         </div>
 
         <div class="fl list-text">
-          <h3>Long Time</h3>
-          <p>Blondie</p>
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.user }}</p>
         </div>
 
         <div class="fl list-icon">
-          <i class="iconfont icon-xinhao4"></i>
+          <i :class="'iconfont icon-xinhao' + (index+1)"></i>
         </div>
 
         <div class="fl list-jg">
-            <span class="pay">$12.99</span>
+            <span class="pay">{{ item.money }}</span>
         </div>
     </li>
   </ul>
 </template>
 
 <script type="text/ecmascript-6">
-
+  export default {
+    props: ['listData'],
+    mounted(){
+      console.log(this.listData)
+    }
+  }
 </script>
 
 <style lang="scss" scoped>

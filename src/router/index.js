@@ -7,6 +7,8 @@ const SingIn = resolve => require(['@/pages/sing/sing_in'], resolve);
 const SingUp = resolve => require(['@/pages/sing/sing_up'], resolve);
 const canNotLogIn = resolve => require(['@/pages/sing/canNotLogIn'], resolve);
 const logIn = resolve => require(['@/pages/sing/logIn'], resolve);
+const genres = resolve => require(['@/pages/genres/genres'], resolve);
+
 
 // index page
 const Musical = resolve => require(['@/pages/Musical/Musical'], resolve);
@@ -19,7 +21,8 @@ var routerRes  = [
   {path: '/SingUp', name: 'SingUp', component: SingUp},
   {path: '/canNotLogIn', name: 'canNotLogIn', component: canNotLogIn},
   {path: '/logIn', name: 'logIn', component: logIn},
-  {path: '/Musical', name: 'Musical', component: Musical}
+  {path: '/Musical', name: 'Musical', component: Musical},
+  {path: '/genres', name: 'genres', component: genres}
 ];
 
 const routers = new Router({

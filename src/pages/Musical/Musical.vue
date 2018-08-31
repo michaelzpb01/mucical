@@ -28,19 +28,49 @@
       <titleBar>
         <p class="left_minu_slot" slot="left_minu">Browse by Genre</p>
         <p class="right_minu_slot" slot="right_minu">
-          <router-link to="#">See All</router-link>
+          <router-link to="genres">See All</router-link>
         </p>
       </titleBar>
 
       <div class="genre-swiper">
         <swiper :options="genreSwiperOption">
           <!-- slides -->
-          <swiper-slide><img src="./img/1.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/2.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/3.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/1.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/2.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/3.jpg"></swiper-slide>
+          <swiper-slide>
+            <div class="genre-list">
+              <img src="./img/1.jpg">
+              <span>Browse by Genre</span>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="genre-list">
+              <img src="./img/2.jpg">
+              <span>Browse by Genre</span>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="genre-list">
+              <img src="./img/3.jpg">
+              <span>Browse by Genre</span>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="genre-list">
+              <img src="./img/1.jpg">
+              <span>Browse by Genre</span>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="genre-list">
+              <img src="./img/2.jpg">
+              <span>Browse by Genre</span>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="genre-list">
+              <img src="./img/3.jpg">
+              <span>Browse by Genre</span>
+            </div>
+          </swiper-slide>
 
         </swiper>
       </div>
@@ -58,12 +88,60 @@
       <div class="albums-swiper">
         <swiper :options="albumsSwiperOption">
           <!-- slides -->
-          <swiper-slide><img src="./img/1.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/2.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/3.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/1.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/2.jpg"></swiper-slide>
-          <swiper-slide><img src="./img/3.jpg"></swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/1.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/2.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/3.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/1.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/2.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/3.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
 
         </swiper>
       </div>
@@ -78,7 +156,84 @@
         </p>
       </titleBar>
 
-      <musicList list-data="this.musicList"></musicList>
+      <musicList :listData="musicList"></musicList>
+    </div>
+
+    <!--Popular Artists-->
+    <div class="Popular">
+      <titleBar>
+        <p class="left_minu_slot" slot="left_minu">Popular Artists</p>
+        <p class="right_minu_slot" slot="right_minu">
+          <router-link to="#">See All</router-link>
+        </p>
+      </titleBar>
+
+      <div class="albums-swiper">
+        <swiper :options="albumsSwiperOption">
+          <!-- slides -->
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/1.jpg"></div>
+              <div class="albums-text">
+                <h3>Popular Artists</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/2.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/3.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/1.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/2.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="albums-list">
+              <div class="albums-img"><img src="./img/3.jpg"></div>
+              <div class="albums-text">
+                <h3>long Time</h3>
+                <p>Blondie</p>
+              </div>
+            </div>
+          </swiper-slide>
+
+        </swiper>
+      </div>
+    </div>
+
+    <!--footer log-->
+    <div class="footer-log">
+      <div class="log-minu"><i class="iconfont icon-facebookicon"></i></div>
+      <div class="log-minu"><i class="iconfont icon-twitter"></i></div>
     </div>
 
   </div>
@@ -96,7 +251,11 @@
           pagination: {
             el: '.musical-swiper-pagination'
           },
-          loop : true
+          loop : true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          }
         },
         genreSwiperOption: {
           slidesPerView: 'auto',
@@ -112,12 +271,36 @@
           type:1,
           data:[
             {
-              img:'../../pages/Musical/img/list1.jpg',
+              imgurl:'../../pages/Musical/img/list1.jpg',
               name:'Long Time',
               user:'Blondie',
+              lv:1,
+              time:'20:00',
+              money:'$10.21'
+            },
+            {
+              imgurl:'../../pages/Musical/img/list2.jpg',
+              name:'The Ghost Tower',
+              user:'Fabrizio Leo',
               lv:2,
               time:'20:00',
               money:'$10.22'
+            },
+            {
+              imgurl:'../../pages/Musical/img/list3.jpg',
+              name:'Naked Poetry',
+              user:'Flower Blase',
+              lv:3,
+              time:'20:00',
+              money:'$10.23'
+            },
+            {
+              imgurl:'../../pages/Musical/img/list4.jpg',
+              name:'Twilight',
+              user:'Denai Moore',
+              lv:4,
+              time:'20:00',
+              money:'$10.24'
             }
           ]
         }
@@ -135,6 +318,8 @@
   .Musical{
     @extend .pageStyle;
     background-color: #151618;
+    padding-bottom:pxTorem(40px);
+
     .silder{
       height:pxTorem(440px);
       overflow: hidden;
@@ -153,6 +338,7 @@
         z-index:1;
       }
     }
+
     .genre{
       .genre-swiper{
         padding-left:pxTorem(20px);
@@ -163,26 +349,28 @@
         overflow: hidden;
         position: relative;
         border-radius: pxTorem(20px);
+        .genre-list{
+          position: relative;
+          span{
+            font-size:pxTorem(40px);
+            line-height:pxTorem(44px);
+            color: #fff;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+          }
+        }
         img{
           width:pxTorem(440px);
           height:pxTorem(241px);
         }
       }
     }
-    .albums{
+
+    .albums,.Popular{
       padding-bottom: pxTorem(10px);
       border-bottom:1px solid #3b3b3e;
-      /*position: relative;*/
-      /*&:after{*/
-        /*position: absolute;*/
-        /*width:100%;*/
-        /*left:0;*/
-        /*bottom:0;*/
-        /*height:1px;*/
-        /*overflow: hidden;*/
-        /*content: '';*/
-        /*background: #3b3b3e;*/
-      /*}*/
 
       .albums-swiper{
         padding-left:pxTorem(20px);
@@ -192,9 +380,59 @@
         height:auto;
         overflow: hidden;
         border-radius: pxTorem(20px);
-        img{
+        .albums-list{
           width:pxTorem(280px);
-          height:pxTorem(280px);
+          position: relative;
+          img{
+            width:100%;
+            height:pxTorem(280px);
+          }
+          .albums-text{
+            *{
+              width:100%;
+              font-size:pxTorem(34px);
+              color: #fff;
+              line-height:pxTorem(44px);
+            }
+            p{
+              font-size:pxTorem(26px);
+              line-height:pxTorem(36px);
+              color: #8f8e94;
+            }
+
+          }
+        }
+
+      }
+    }
+
+    .Popular{
+      .swiper-slide{
+        .albums-list{
+          width:pxTorem(240px);
+          img{
+            width:100%;
+            height:pxTorem(240px);
+          }
+        }
+      }
+    }
+
+    .footer-log{
+      font-size:0;
+      text-align: center;
+      margin-top:pxTorem(20px);
+      .log-minu{
+        font-size:18px;
+        display: inline-block;
+        height:pxTorem(86px);
+        width:pxTorem(330px);
+        color: #fff;
+        line-height:pxTorem(86px);
+        border:1px solid #8f8e94;
+        border-radius: pxTorem(10px);
+        &:first-child{
+          margin-right:pxTorem(40px);
         }
       }
     }
