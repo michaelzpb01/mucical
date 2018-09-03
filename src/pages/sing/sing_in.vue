@@ -32,8 +32,8 @@
         <li class="minu-tw minu_shear">
           <i class="iconfont icon-twitter"></i>
         </li>
-
       </ul>
+
       <!--Forgot your password-->
       <div class="reset-password">
         <router-link to="canNotLogIn">Forgot your password?</router-link>
