@@ -32,5 +32,3 @@ const routers = new Router({
 });
 
 export default routers;
-
-

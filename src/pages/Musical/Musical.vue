@@ -271,7 +271,7 @@
           type:1,
           data:[
             {
-              imgurl:'../../pages/Musical/img/list1.jpg',
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/Musical/img/list1.jpg',
               name:'Long Time',
               user:'Blondie',
               lv:1,
@@ -279,7 +279,7 @@
               money:'$10.21'
             },
             {
-              imgurl:'../../pages/Musical/img/list2.jpg',
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/Musical/img/list2.jpg',
               name:'The Ghost Tower',
               user:'Fabrizio Leo',
               lv:2,
@@ -287,7 +287,7 @@
               money:'$10.22'
             },
             {
-              imgurl:'../../pages/Musical/img/list3.jpg',
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/Musical/img/list3.jpg',
               name:'Naked Poetry',
               user:'Flower Blase',
               lv:3,
@@ -295,7 +295,7 @@
               money:'$10.23'
             },
             {
-              imgurl:'../../pages/Musical/img/list4.jpg',
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/Musical/img/list4.jpg',
               name:'Twilight',
               user:'Denai Moore',
               lv:4,
@@ -312,6 +312,7 @@
       //console.log(_._('.silder img'))
     }
   }
+
 </script>
 
 <style lang="scss" scoped>

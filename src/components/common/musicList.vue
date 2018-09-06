@@ -3,7 +3,7 @@
 
     <li class="clearFix list-li" v-for="(item, index) in listData.data">
         <div class="fl list-img">
-          <img src="../../pages/Musical/img/list1.jpg">
+          <img :src="item.imgurl">
         </div>
 
         <div class="fl list-text">

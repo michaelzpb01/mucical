@@ -12,37 +12,56 @@
     </div>
 
     <ul class="genres-lists">
-      <li class="genres-list">
-        <img src="./img/genres1.jpg" alt="">
-        <div class="list-name">Ambient1</div>
+      <li class="genres-list" v-for="item in genresData.data">
+        <router-link to="Musical">
+          <img :src="item.imgurl">
+          <div class="list-name">{{item.name}}</div>
+        </router-link>
       </li>
-      <li class="genres-list">
-        <img src="./img/genres2.jpg" alt="">
-        <div class="list-name">Ambient2</div>
-      </li>
-      <li class="genres-list">
-        <img src="./img/genres3.jpg" alt="">
-        <div class="list-name">Ambient3</div>
-      </li>
-      <li class="genres-list">
-        <img src="./img/genres2.jpg" alt="">
-        <div class="list-name">Ambient4</div>
-      </li>
-      <li class="genres-list">
-        <img src="./img/genres1.jpg" alt="">
-        <div class="list-name">Ambient5</div>
-      </li>
-      <li class="genres-list">
-        <img src="./img/genres3.jpg" alt="">
-        <div class="list-name">Ambient6</div>
-      </li>
+
     </ul>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+  //https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres2.jpg
+  export default {
+    data(){
+      return {
+        genresData :{
+          code:0,
+          data:[
+            {
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres1.jpg',
+              name:'Ambient1'
+            },
+            {
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres2.jpg',
+              name:'Ambient2'
+            },
+            {
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres3.jpg',
+              name:'Ambient3'
+            },
+            {
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres2.jpg',
+              name:'Ambient4'
+            },
+            {
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres1.jpg',
+              name:'Ambient5'
+            },
+            {
+              imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres3.jpg',
+              name:'Ambient6'
+            }
+          ]
+        }
+      }
 
-</script>
+    }
+  }
+</script>j
 
 <style lang="scss" scoped>
   .genres{
@@ -95,6 +114,9 @@
       overflow: hidden;
       border-radius: pxTorem(20px);
       margin-bottom: pxTorem(20px);
+      a{
+        display: block;
+      }
       img{
         width:100%;
         height:100%;
