@@ -26,7 +26,7 @@
   export default {
     props: ['listData'],
     mounted(){
-      console.log(this.listData)
+      // console.log(this.listData)
     }
   }
 </script>

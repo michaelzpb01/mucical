@@ -25,7 +25,7 @@ var base = {
     return res;
   },
   scaleImg: function () {
-    console.log(this)
+    // console.log(this)
     var imgs = this;
     for (var i = 0; i < imgs.length; i++) {
       imgs[i].onload = function () {

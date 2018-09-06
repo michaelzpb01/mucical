@@ -1,7 +1,7 @@
 <template>
   <div class="genres">
     <header_v>
-      <p class="center_title_slot" slot="center_title">Musical</p>
+      <p class="center_title_slot" slot="center_title">genres</p>
       <p class="right_minu_slot" slot="right_minu">
         <i class="iconfont icon-search_light"></i>
       </p>
@@ -13,7 +13,7 @@
 
     <ul class="genres-lists">
       <li class="genres-list" v-for="item in genresData.data">
-        <router-link to="Musical">
+        <router-link :to="{path:'albums',query:{id: item.id}}">
           <img :src="item.imgurl">
           <div class="list-name">{{item.name}}</div>
         </router-link>
@@ -33,32 +33,37 @@
           data:[
             {
               imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres1.jpg',
-              name:'Ambient1'
+              name:'Ambient1',
+              id:1
             },
             {
               imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres2.jpg',
-              name:'Ambient2'
+              name:'Ambient2',
+              id:12
             },
             {
               imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres3.jpg',
-              name:'Ambient3'
+              name:'Ambient3',
+              id:13
             },
             {
               imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres2.jpg',
-              name:'Ambient4'
+              name:'Ambient4',
+              id:14
             },
             {
               imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres1.jpg',
-              name:'Ambient5'
+              name:'Ambient5',
+              id:15
             },
             {
               imgurl:'https://raw.githubusercontent.com/michaelzpb01/mucical/dev/src/pages/genres/img/genres3.jpg',
-              name:'Ambient6'
+              name:'Ambient6',
+              id:16
             }
           ]
         }
       }
-
     }
   }
 </script>j
